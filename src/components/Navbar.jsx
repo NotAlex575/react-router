@@ -3,16 +3,20 @@ import { NavLink } from "react-router-dom"
 const Navbar = () => {
   return (
     <header>
-      <div className='container row px-4 text-center'>
         <h1>Questa è la Navbar!</h1>
-        <div className='row'>
-          <p>
-            <NavLink to="/">Homepage</NavLink>
-            <NavLink to="/about">About</NavLink>
-            <NavLink to="/contacts">Contacts</NavLink>
-          </p>
-        </div>
-      </div>
+        <nav>
+          <ul className="list-unstyled d-flex">
+            <li className="me-3">
+              <NavLink to="/">Homepage</NavLink>
+            </li>
+            <li className="me-3">
+              <NavLink to="/about">About</NavLink>
+            </li>
+            <li className="me-3">
+              <NavLink to="/contacts">Contacts</NavLink>
+            </li>
+          </ul>
+        </nav>
     </header>
   )
 }
