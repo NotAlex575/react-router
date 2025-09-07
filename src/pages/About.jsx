@@ -2,7 +2,7 @@ import Navbar from '../components/Navbar'
 
 const About = () => {
   return (
-    <div>About</div>
+    <div className="text-center fs-1 fw.bold mb-5">About</div>
   )
 }
 
