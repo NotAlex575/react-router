@@ -7,13 +7,19 @@ const Navbar = () => {
         <nav>
           <ul className="list-unstyled d-flex">
             <li className="me-3">
-              <NavLink to="/">Homepage</NavLink>
+              <NavLink to="/" className={
+                ({isActive}) => isActive ? "fw-bold" : ""
+                }>Homepage</NavLink>
             </li>
             <li className="me-3">
-              <NavLink to="/about">About</NavLink>
+              <NavLink to="/about" className={
+                ({isActive}) => isActive ? "fw-bold" : ""
+                }>About</NavLink>
             </li>
             <li className="me-3">
-              <NavLink to="/products">Products</NavLink>
+              <NavLink to="/products" className={
+                ({isActive}) => isActive ? "fw-bold" : ""
+                }>Products</NavLink>
             </li>
           </ul>
         </nav>
