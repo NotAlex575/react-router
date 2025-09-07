@@ -2,10 +2,7 @@ import Navbar from "../components/Navbar"
 
 const Products = () => {
   return (
-    <>
-        <Navbar></Navbar>
-        <div>About</div>
-    </>
+    <div>Products</div>
   )
 }
 
