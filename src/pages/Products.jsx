@@ -11,20 +11,22 @@ const Products = () => {
 
     return (
     <>
-        <div>Products</div>
-        <ul>
+        <div className="text-center fs-1 fw.bold mb-5">Products</div>
+        <div className="container text-center">
+            <div className="row align-items-start">
             {prodotti.map((prodotto) => {
                 return(
-                <li key={prodotto.id}> 
+                <div className="col-6 border mb-5" key={prodotto.id}> 
                     <h2>{prodotto.title}</h2>
-                    <img src={prodotto.image} alt={prodotto.title} />
+                    <img className="img-fluid" src={prodotto.image} alt={prodotto.title} />
                     <p>{prodotto.description}</p>
                     <p>{prodotto.category}</p>
                     <p>{prodotto.price} euro</p>
-                </li>
+                </div>
                 )
             })}
-        </ul>
+            </div>
+        </div>
     </>
   )
 }
