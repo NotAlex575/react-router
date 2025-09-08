@@ -29,14 +29,17 @@ const ProductSingle = () => {
         </div>
         <div className="d-flex justify-content-around mt-5 mb-5">
             <button
+                className="btn btn-primary"
                 onClick={() => naviga(`/products/${prodotto.id-1}`)}>
                 vedi product precedente
             </button>
             <button
+                className="btn btn-primary"
                 onClick={() => naviga(-1)}>
                 torna alla pagina precedente
             </button>
             <button
+                className="btn btn-primary"
                 onClick={() => naviga(`/products/${prodotto.id+1}`)}>
                 vedi product successivo
             </button>
