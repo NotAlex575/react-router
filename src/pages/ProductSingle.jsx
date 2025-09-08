@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 const ProductSingle = () => {
   const { id } = useParams ();
   const [prodotto, setProdotto] = useState();
+  const naviga = useNavigate();
 
     useEffect(() =>{
         fetch(`https://fakestoreapi.com/products/${id}`)
@@ -16,6 +17,7 @@ const ProductSingle = () => {
     <>
     <div className="container text-center mt-5">
        {prodotto ? (
+        <>
          <div className="row align-items-start">
             <div className="col-12 border mb-5" key={prodotto.id}> 
                 <h2>{prodotto.title}</h2>
@@ -25,6 +27,13 @@ const ProductSingle = () => {
                 <p>{prodotto.price} euro</p>
             </div>
         </div>
+        <div  className="d-flex justify-content-center mt-5 mb-5">
+            <button
+            onClick={() => naviga(-1)}>
+            torna alla pagina precedente
+        </button>
+        </div>
+        </>
        ):(
         <p className="loader">caricamento in corso....</p>
        )}
