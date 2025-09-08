@@ -27,11 +27,19 @@ const ProductSingle = () => {
                 <p>{prodotto.price} euro</p>
             </div>
         </div>
-        <div  className="d-flex justify-content-center mt-5 mb-5">
+        <div className="d-flex justify-content-around mt-5 mb-5">
             <button
-            onClick={() => naviga(-1)}>
-            torna alla pagina precedente
-        </button>
+                onClick={() => naviga(`/products/${prodotto.id-1}`)}>
+                vedi product precedente
+            </button>
+            <button
+                onClick={() => naviga(-1)}>
+                torna alla pagina precedente
+            </button>
+            <button
+                onClick={() => naviga(`/products/${prodotto.id+1}`)}>
+                vedi product successivo
+            </button>
         </div>
         </>
        ):(
