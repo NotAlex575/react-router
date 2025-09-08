@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom"
 
 const Navbar = () => {
   return (
-    <header>
+    <header className="border bg-primary-subtle">
         <h1>Questa è la Navbar!</h1>
         <nav>
           <ul className="list-unstyled d-flex">

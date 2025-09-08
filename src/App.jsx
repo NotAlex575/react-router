@@ -1,10 +1,11 @@
 import About from "./pages/About"
 import Homepage from "./pages/Homepage"
 import Products from "./pages/Products"
+import ProductSingle from "./pages/ProductSingle"
 import Defaultlayout from "./layouts/Defaultlayout"
 
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import ProductSingle from "./pages/ProductSingle"
+
 
 function App() {
 
@@ -15,8 +16,10 @@ function App() {
           <Route element={<Defaultlayout></Defaultlayout>}>
             <Route path="/" element={<Homepage></Homepage>}></Route>
             <Route path="/about" element={<About></About>}></Route>
-            <Route path="/products" element={<Products></Products>}></Route>
-            <Route path="/productSingle" element={<ProductSingle></ProductSingle>}></Route>
+            <Route path="/products">
+              <Route path = "" element={<Products></Products>}></Route>
+              <Route path = ":id" element={<ProductSingle></ProductSingle>}></Route>
+            </Route>
           </Route>
         </Routes>
       </BrowserRouter>
